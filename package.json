@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "@idiotic/homepage",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,6 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.5.1"
+    "@astrojs/cloudflare": "^11.2.0",
+    "astro": "^4.16.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "@types/react": "^18.3.12"
   }
 }

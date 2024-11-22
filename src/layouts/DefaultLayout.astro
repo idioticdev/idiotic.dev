@@ -1,0 +1,63 @@
+---
+import "../main.css";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+// const image = "/social-og.png";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta name="twitter:creator" content="@idioticdev" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css2?family=lora:400|playfair-display-sc:900?display=swap"
+      rel="stylesheet"
+    />
+    <script 
+      defer 
+      src="https://cloud.umami.is/script.js" 
+      data-website-id="11535c16-d44f-4f35-b3c0-62d853f9f629"
+    ></script>
+    
+  </head>
+  <body>
+    <main class="container">
+      <slot />
+      <footer>
+        <p>
+          🦋
+          <a href="https://bsky.app/profile/idiotic.dev">@idiotic.dev</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

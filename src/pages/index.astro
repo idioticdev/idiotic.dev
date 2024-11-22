@@ -1,32 +1,15 @@
 ---
-import "../main.css";
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>idioticdev</title>
-    <link rel="preconnect" href="https://fonts.bunny.net" />
-    <link
-      href="https://fonts.bunny.net/css2?family=noto-sans-mono:100|300?display=swap"
-      rel="stylesheet"
-    />
-    <script
-      defer
-      data-domain="idiotic.dev"
-      src="https://plausible.io/js/plausible.js"
-    ></script>
-  </head>
-  <body>
-    <h1>idioticdev</h1>
-    <i class="lead">The human representation of the ID10T error.</i>
-    <h2>Projects</h2>
-    <dl>
-      <dt><a href="https://letters.idiotic.dev">Letters</a></dt>
-      <dd>Love Letters to the code I adore.</dd>
-    </dl>
-  </body>
-</html>
+<DefaultLayout
+  title="idioticdev"
+  description="The human representation of the ID10T error."
+>
+  <h1>The idiotic dev</h1>
+  <i class="lead">The human representation of the ID10T error.</i>
+  <h2>Projects</h2>
+  <dl>
+    <dt><a href="https://letters.idiotic.dev">Letters</a></dt>
+    <dd>Love Letters to the code I adore.</dd>
+  </dl>
+</DefaultLayout>

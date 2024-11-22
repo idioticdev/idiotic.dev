@@ -30,12 +30,6 @@ a {
     margin-right: 1.4em;
 }
 
-a::after {
-    content: '→';
-    position: absolute;
-    right: -1em;
-}
-
 a::before  {
     content: '';
     position: absolute;
